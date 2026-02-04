@@ -1,0 +1,76 @@
+# Lab 1: Introduction to Java Programming
+
+## Objectives
+
+1. What is JAVA?
+2. Features of Java
+3. JAVA Basics
+4. Installing JDK and setting path
+5. Writing HelloWorld.java in Text Editor
+6. JAVA variables & data types
+7. Input & Output
+8. Java Variable Type Conversion & Type Casting
+9. Lab tasks
+10. Post Lab Questions
+
+## Prerequisites
+
+Basic understanding of programming concepts and ability to install software.
+
+## Lab Structure
+
+Each exercise is organized in its own directory with:
+- `README.md` - Problem statement and requirements
+- Solution Java file(s) - Working implementation
+
+### Exercises
+
+1. **[Exercise 1: JAVA Environment Installation & Error Messages](./exercise1/)** - Setup and understanding compiler errors
+2. **[Exercise 2: Mathematical Expressions](./exercise2/)** - Even/odd number checker
+3. **[Exercise 3: Type Casting](./exercise3/)** - Division with type conversion
+4. **[Exercise 4: Operators](./exercise4/)** - Finding largest of three numbers
+5. **[Exercise 5: if/else, Array](./exercise5/)** - Array operations (largest, search, count evens, reverse)
+6. **[Exercise 6: Debugging Practice](./exercise6/)** - Finding and fixing common Java errors
+
+## Key Concepts Covered
+
+- **Java Environment Setup**: Installing JDK and understanding the compilation process
+- **Data Types**: int, double, String, boolean, arrays
+- **Input/Output**: Using Scanner class for user input
+- **Operators**: Arithmetic, relational, and logical operators
+- **Control Structures**: if-else statements, for loops
+- **Arrays**: Declaration, initialization, and manipulation
+- **Type Casting**: Converting between data types
+- **Error Handling**: Understanding and fixing common compilation errors
+
+## How to Use
+
+1. Navigate to any exercise directory:
+   ```bash
+   cd exercise2
+   ```
+
+2. Compile and run the Java file:
+   ```bash
+   javac Main.java
+   java Main
+   ```
+
+## Post Lab Questions
+
+1. Can you cast string into int?
+2. Why JAVA when there are other OOP languages?
+
+## Notes
+
+- All exercises use static methods only (object-oriented concepts come in later labs)
+- Scanner class is used for user input
+- Remember to import `java.util.Scanner` when using Scanner
+
+## Author
+
+Lab exercises completed as part of Object-Oriented Programming course (CSC-150).
+
+## License
+
+These solutions are for educational purposes.
