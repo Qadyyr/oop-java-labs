@@ -27,10 +27,11 @@ and manageable. In this lab, all methods are declared static so they can
 be called directly from the main method without creating objects.
 
 ### Method Syntax
-
-static returnType methodName(parameters) {\
-// method body\
+```java
+static returnType methodName(parameters) {
+    // method body
 }
+```
 
 ## 2. Types of Methods
 
@@ -39,145 +40,148 @@ static returnType methodName(parameters) {\
 This type of method is used when a task only performs an action such as
 displaying a message and does not need input or output.
 
-static void greet() {\
-System.out.println(\"Welcome to Java Methods Lab\");\
+```java
+static void greet() {
+    System.out.println("Welcome to Java Methods Lab");
 }
+```
 
 ### 2.2 Method with Parameters and No Return Value
 
 These methods accept input values as parameters and perform operations
 without returning a result.
-
-static void printSquare(int num) {\
-System.out.println(\"Square is: \" + (num \* num));\
+```java
+static void printSquare(int num) {
+    System.out.println("Square is: " + (num * num));
 }
-
+```
 ### 2.3 Method with Return Value and No Parameters
 
 This type of method performs a calculation and returns a value without
 taking any input parameters.
-
-static int getFixedNumber() {\
-return 10;\
+```java
+static int getFixedNumber() {
+    return 10;
 }
-
+```
 ### 2.4 Method with Parameters and Return Value
 
 This is the most commonly used method type. It takes input, processes
 it, and returns a result.
-
-static int add(int a, int b) {\
-return a + b;\
+```java
+static int add(int a, int b) {
+    return a + b;
 }
-
+```
 ## 3. Methods with Control Statements
 
 ### 3.1 If--Else Inside a Method
 
 If--else statements allow decision-making inside methods based on
 conditions.
-
-static String checkResult(int marks) {\
-if (marks \>= 40)\
-return \"Pass\";\
-else\
-return \"Fail\";\
+```java
+static String checkResult(int marks) {
+    if (marks >= 40)
+        return "Pass";
+    else
+        return "Fail";
 }
+```
 
 ### 3.2 Ternary Operator in Methods
 
 The ternary operator is a short form of if--else used for simple
 conditional expressions.
-
-static int findMax(int a, int b) {\
-return (a \> b) ? a : b;\
+```java
+static int findMax(int a, int b) {
+    return (a > b) ? a : b;
 }
-
+```
 ### 3.3 Switch Statement in Methods
 
 The switch statement is used when multiple conditions are based on a
 single variable value.
-
-static String dayName(int day) {\
-switch (day) {\
-case 1: return \"Monday\";\
-case 2: return \"Tuesday\";\
-case 3: return \"Wednesday\";\
-case 4: return \"Thursday\";\
-case 5: return \"Friday\";\
-default: return \"Invalid Day\";\
-}\
+```java
+static String dayName(int day) {
+    switch (day) {
+        case 1: return "Monday";
+        case 2: return "Tuesday";
+        case 3: return "Wednesday";
+        case 4: return "Thursday";
+        case 5: return "Friday";
+        default: return "Invalid Day";
+    }
 }
-
+```
 ## 4. Methods with String Basics
 
 ### 4.1 String Length
 
 The length() method returns the number of characters present in a
 string.
-
-static int getLength(String text) {\
-return text.length();\
+```java
+static int getLength(String text) {
+    return text.length();
 }
-
+```
 ### 4.2 String Comparison
 
 Strings should be compared using equals() instead of == to compare
 actual content.
-
-static boolean checkName(String name) {\
-return name.equals(\"Ali\");\
+```java
+static boolean checkName(String name) {
+    return name.equals("Ali");
 }
-
+```
 ### 4.3 String Case Conversion
-
-static String convertToUpper(String word) {\
-return word.toUpperCase();\
+```java
+static String convertToUpper(String word) {
+    return word.toUpperCase();
 }
-
+```
 ## 5. Methods with Arrays
 
 ### 5.1 Sum of Array Elements
 
 Arrays can be passed to methods to perform calculations on multiple
 values.
-
-static int sumArray(int\[\] arr) {\
-int sum = 0;\
-for (int i = 0; i \< arr.length; i++) {\
-sum += arr\[i\];\
-}\
-return sum;\
+```java
+static int sumArray(int[] arr) {
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
 }
-
+```
 ### 5.2 Find Maximum Element in Array
-
-static int findMax(int\[\] arr) {\
-int max = arr\[0\];\
-for (int i = 1; i \< arr.length; i++) {\
-if (arr\[i\] \> max)\
-max = arr\[i\];\
-}\
-return max;\
+```java
+static int findMax(int[] arr) {
+    int max = arr[0];
+    for (int i = 1; i < arr.length; i++) {
+        if (arr[i] > max)
+            max = arr[i];
+    }
+    return max;
 }
-
+```
 ## 6. Methods Using Math Class
 
 The Math class provides built-in static methods for common mathematical
 operations. These methods can be used directly without creating objects.
 
 ### 6.1 Power Function
-
-static int calculatePower(int a, int b) {\
-return (int) Math.pow(a, b);\
+```java
+static int calculatePower(int a, int b) {
+    return (int) Math.pow(a, b);
 }
-
+```
 ### 6.2 Absolute Value
-
-static int getAbsolute(int x) {\
-return Math.abs(x);\
+```java
+static int getAbsolute(int x) {
+    return Math.abs(x);
 }
-
+```
 ## 7. Command-Line Arguments
 
 Command-line arguments allow data to be passed to the program at the
@@ -185,47 +189,47 @@ time of execution. They are received as an array of strings in the main
 method.
 
 ### Example: Using Command-Line Arguments
-
-class CommandLineExample {\
-public static void main(String\[\] args) {\
-int a = Integer.parseInt(args\[0\]);\
-int b = Integer.parseInt(args\[1\]);\
-System.out.println(\"Sum: \" + (a + b));\
-}\
+```java
+class CommandLineExample {
+    public static void main(String[] args) {
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
+        System.out.println("Sum: " + (a + b));
+    }
 }
-
+```
 ## 8. Complete Example Program
+```java
+class MethodLab2 {
 
-class MethodLab2 {\
-\
-static int square(int x) {\
-return x \* x;\
-}\
-\
-static boolean isPositive(int x) {\
-return x \> 0;\
-}\
-\
-static String checkDay(int d) {\
-return dayName(d);\
-}\
-\
-static String dayName(int day) {\
-switch (day) {\
-case 1: return \"Monday\";\
-case 2: return \"Tuesday\";\
-default: return \"Invalid\";\
-}\
-}\
-\
-public static void main(String\[\] args) {\
-int n = 5;\
-System.out.println(\"Square: \" + square(n));\
-System.out.println(\"Is Positive: \" + isPositive(n));\
-System.out.println(\"Day: \" + checkDay(1));\
-}\
+    static int square(int x) {
+        return x * x;
+    }
+
+    static boolean isPositive(int x) {
+        return x > 0;
+    }
+
+    static String checkDay(int d) {
+        return dayName(d);
+    }
+
+    static String dayName(int day) {
+        switch (day) {
+            case 1: return "Monday";
+            case 2: return "Tuesday";
+            default: return "Invalid";
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        System.out.println("Square: " + square(n));
+        System.out.println("Is Positive: " + isPositive(n));
+        System.out.println("Day: " + checkDay(1));
+    }
 }
-
+```
 ## Lab Guidelines
 
 • All methods must be static\
@@ -249,33 +253,16 @@ Instructions:\
 
 ## Task 0: Syntax Errors
 
-  ------------------------------------------------------------------------------------
-  Broken Code                   Find the Error          Fix It
-  ----------------------------- ----------------------- ------------------------------
-  static int add(int a int b){  Comma is missing        static int add(int a, int b){
-  return a+b; }                 between arguments       return a+b;}
+ | Broken Code                     | Find the Error                   | Fix It                                 |
+|---------------------------------|----------------------------------|----------------------------------------|
+| `static int add(int a int b){ return a+b; }` | Comma is missing between arguments | `static int add(int a, int b){ return a+b; }` |
+| `static void show(){ System.out.println("Hi") }` | Semi-colon missing | `static void show(){ System.out.println("Hi"); }` |
+| `static int square(int x){ System.out.println(x*x); }` | Return type is int but we're returning nothing, wrong behavior | `static int square(int x){ return x*x; }` |
+| `switch(x){ case 1: System.out.println("One") break; }` | Missing semicolon | `switch(x){ case 1: System.out.println("One"); break; }` |
+| `int[] arr = new int[5]` | Statement missing semicolon | `int[] arr = new int[5];` |
+| `public static void main(String args){ }` | Main method incorrect, there should be array of String | `public static void main(String[] args){ }` |
+| `static int max(int[] arr){ return arr.length }` | Semicolon missing after `arr.length` | `static int max(int[] arr){ return arr.length; }` |
 
-  static void show(){           Semi-colon missing      static void show(){
-  System.out.println(\"Hi\") }                          System.out.println(\"Hi\"); }
-
-  static int square(int x){     Return type is int but  static int square(int x){
-  System.out.println(x\*x); }   we're returning nothing return x\*x; }
-                                , wrong behavior        
-
-  switch(x){ case 1:            Missing semicolon       switch(x){ case 1:
-  System.out.println(\"One\")                           System.out.println(\"One\");
-  break; }                                              break; }
-
-  int\[\] arr = new int\[5\]    Statement missing       int\[\] arr = new int\[5\];
-                                semicolon               
-
-  public static void            Main method incorrect   public static void
-  main(String args){ }          there should be array   main(String\[\] args){ }
-                                od string               
-
-  static int max(int\[\] arr){  Semicolon missing after static int max(int\[\] arr){
-  return arr.length }           arr.length              return arr.length; }
-  ------------------------------------------------------------------------------------
 
 ## Task 1: Smart Number Analyzer
 
@@ -290,43 +277,39 @@ Return:\
 • \"Zero\" if number is 0
 
 Answer:
-
+```java
 import java.util.Scanner;
 
-class SmartNumberAnalyzer{
+class SmartNumberAnalyzer {
 
-public static void main (String args\[\]){
+    public static void main(String[] args) {
 
-System.out.println(\"\*\*Hello! This Is SmartNumberAnalyzer\*\*\");
+        System.out.println("**Hello! This Is SmartNumberAnalyzer**");
 
-Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-System.out.println(\"Enter Any Number To Analyze : \");
+        System.out.println("Enter Any Number To Analyze : ");
+        int n = sc.nextInt();
 
-int n = sc.nextInt();
+        System.out.println("Result : " + analyze(n));
 
-System.out.println(\"Result : \" + analyze(n));
+        sc.close();
+    }
 
+    static String analyze(int n) {
+        if (n < 0) {
+            return "Negative";
+        } else if (n > 0) {
+            if (n % 2 == 0) 
+                return "Positive Even";
+            else 
+                return "Positive Odd";
+        } else {
+            return "Zero";
+        }
+    }
 }
-
-static String analyze(int n){
-
-if(n\<0){ return \"Negative\";}
-
-else if(n\>0){
-
-if(n%2==0) return \"Positive Even\";
-
-else return \"Positive Odd\";
-
-}
-
-else{ return \"Zero\";}
-
-}
-
-}
-
+```
 ## Task 2: Conditional Calculator
 
 Method Type:\
@@ -339,50 +322,39 @@ Rules:\
 • If equal, return 0
 
 Answer:
-
+```
 import java.util.Scanner;
 
-class ConditionalCalc{
+class ConditionalCalc {
 
-public static void main (String\[\] args){
+    public static void main(String[] args) {
 
-Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-System.out.print(\"Enter Any Number A : \");
+        System.out.print("Enter Any Number A: ");
+        int a = sc.nextInt();
 
-int a = sc.nextInt();
+        System.out.print("Enter Any Number B: ");
+        int b = sc.nextInt();
 
-System.out.print(\"Enter Any Number B : \");
+        int result = calc(a, b);
 
-int b = sc.nextInt();
+        System.out.println("Result = " + result);
 
-int result = calc(a,b);
+        sc.close();
+    }
 
-System.out.print(\"Result = \" + result);
-
+    static int calc(int a, int b) {
+        if (a > b) {
+            return a - b;
+        } else if (a < b) {
+            return b - a;
+        } else {
+            return 0;
+        }
+    }
 }
-
-static int calc(int a, int b){
-
-if (a\>b){
-
-return a-b;
-
-} else if(a\<b){
-
-return b-a;
-
-} else{
-
-return 0;
-
-![](media/image1.png){width="4.333333333333333in"
-height="1.2569444444444444in"} }
-
-}
-
-}
-
+```
 ## Task 3: Array Balance Checker
 
 Method Type:\
@@ -392,65 +364,45 @@ Parameters: int\[\] arr\
 Return true if sum of even elements equals sum of odd elements.
 
 Answer:
-
+```java
 import java.util.Scanner;
 
-class ArrBal{
+class ArrBal {
 
-public static void main (String\[\] args){
+    public static void main(String[] args) {
 
-Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-System.out.print(\"Enter the size of array: \");
+        System.out.print("Enter the size of array: ");
+        int n = sc.nextInt();
 
-int n = sc.nextInt();
+        int[] arr = new int[n];
 
-int\[\] arr = new int\[n\];
+        System.out.print("Enter the elements of array to check balance: ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
 
-System.out.print(\"Enter the elements off array to check balance : \");
+        System.out.println("\nResult = " + checkArr(arr));
 
-for (int i=0; i\<n; i++){
+        sc.close();
+    }
 
-arr\[i\] = sc.nextInt();
+    static boolean checkArr(int[] arr) {
+        int even = 0, odd = 0;
 
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+        }
+
+        return even == odd;
+    }
 }
-
-System.out.print(\"\\nResult = \" + checkArr(arr));
-
-}
-
-static boolean checkArr(int\[\] arr){
-
-int even = 0,odd = 0;
-
-for (int i=0; i\<arr.length; i++){
-
-if (arr\[i\]%2==0){
-
-even++;
-
-}else if(arr\[i\]%2!=0){
-
-odd++;
-
-}
-
-}
-
-if (even==odd){
-
-return true;
-
-}else{
-
-return false;
-
-}
-
-}
-
-![](media/image2.png){width="3.951388888888889in"
-height="1.4166666666666667in"} }
+```
 
 ## Task 4: Switch-Driven Grading System
 
@@ -467,49 +419,37 @@ Use switch on (marks / 10):\
 Note: marks are in range (0-100).
 
 Answer:
-
+```java
 import java.util.Scanner;
 
-class Grading{
+class Grading {
 
-public static void main (String\[\] args){
+    public static void main(String[] args) {
 
-Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-System.out.print(\"Enter Marks : \");
+        System.out.print("Enter Marks: ");
+        int marks = sc.nextInt();
 
-int marks = sc.nextInt();
+        System.out.println("Grading: " + grad(marks));
 
-System.out.print(\"Grading : \" + grad(marks));
+        sc.close();
+    }
 
+    static String grad(int marks) {
+        switch (marks / 10) {
+            case 10:
+                return "Distinction";
+            case 9:
+                return "Excellent";
+            case 8:
+                return "Very Good";
+            default:
+                return "Fail";
+        }
+    }
 }
-
-static String grad(int marks){
-
-switch(marks/10){
-
-case 10:
-
-return \"Distinction\";
-
-case 9:
-
-return \"Excellent\";
-
-case 8:
-
-return \"Very Good\";
-
-default:
-
-return \"Fail\";
-
-}
-
-}
-
-![](media/image3.png){width="4.826388888888889in"
-height="1.0555555555555556in"}}
+```
 
 ## Task 5: String Pattern Validator
 
@@ -523,43 +463,35 @@ Return true if:\
 • Last character is a digit
 
 Answer:
-
+```java
 import java.util.Scanner;
 
-class Stpattern{
+class Stpattern {
 
-public static void main (String\[\] args){
+    public static void main(String[] args) {
 
-Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-System.out.print(\"Enter any String to validate pattern : \");
+        System.out.print("Enter any String to validate pattern: ");
+        String str = sc.nextLine();
 
-String str = sc.nextLine();
+        boolean result = pattern(str);
 
-boolean result = pattern(str);
+        System.out.println("Pattern Valid: " + result);
 
-System.out.print(\"Pattern Valid : \" + result);
+        sc.close();
+    }
 
+    static boolean pattern(String str) {
+        if (str.length() >= 6 &&
+            Character.isUpperCase(str.charAt(0)) &&
+            Character.isDigit(str.charAt(str.length() - 1))) {
+            return true;
+        }
+        return false;
+    }
 }
-
-static boolean pattern(String str){
-
-if (str.length() \>= 6 &&
-
-Character.isUpperCase(str.charAt(0)) &&
-
-Character.isDigit(str.charAt(str.length()-1))){
-
-return true;
-
-}
-
-return false;
-
-}
-
-![](media/image4.png){width="3.4166666666666665in"
-height="1.354861111111111in"}}
+```
 
 ## Task 6: Array Peak Finder
 
@@ -571,54 +503,44 @@ Return index of the largest element.\
 If multiple max values exist, return first index.
 
 Answer:
-
+```java
 import java.util.Scanner;
 
-class ArrPeak{
+class ArrPeak {
 
-public static void main(String\[\] args){
+    public static void main(String[] args) {
 
-Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-int\[\] arr = new int\[5\];
+        int[] arr = new int[5];
 
-System.out.print(\"Enter elements of array : \");
+        System.out.print("Enter elements of array: ");
+        for (int i = 0; i < 5; i++) {
+            arr[i] = sc.nextInt();
+        }
 
-for (int i=0; i\<5; i++){
+        int result = peakfinder(arr);
 
-arr\[i\]=sc.nextInt();
+        System.out.println("Index of largest element: " + result);
 
+        sc.close();
+    }
+
+    static int peakfinder(int[] arr) {
+        int largest = arr[0];
+        int index = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > largest) {
+                largest = arr[i];
+                index = i;
+            }
+        }
+
+        return index;
+    }
 }
-
-int result = peakfinder(arr);
-
-System.out.print(\"index of largest element : \" + result);
-
-}
-
-static int peakfinder(int\[\] arr){
-
-int largest = arr\[0\];
-
-int index = 0;
-
-for (int i=0; i\<arr.length; i++){
-
-if(arr\[i\]\>largest){
-
-largest=arr\[i\];
-
-index = i;
-
-}
-
-}
-
-return index;
-
-}
-
-}![](media/image5.png){width="3.9305555555555554in" height="1.375in"}
+```
 
 ## 
 
@@ -632,58 +554,43 @@ Return \"Perfect Square Difference\" if \|a − b\| is a perfect square.\
 Otherwise return \"Not Perfect Square\".
 
 Answer:
-
+```java
 import java.util.Scanner;
 
-class Maths{
+class Maths {
 
-public static void main(String\[\] args){
+    public static void main(String[] args) {
 
-Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-System.out.print(\"Enter any integer a : \");
+        System.out.print("Enter any integer a: ");
+        int a = sc.nextInt();
 
-int a = sc.nextInt();
+        System.out.print("Enter any integer b: ");
+        int b = sc.nextInt();
 
-System.out.print(\"Enter any integer b : \");
+        String result = isPerfect(a, b);
 
-int b = sc.nextInt();
+        System.out.println("Result: " + result);
 
-String result = isPerfect(a,b);
+        sc.close();
+    }
 
-System.out.print(\"Result : \" + result);
+    static String isPerfect(int a, int b) {
+        int num = a - b;
 
-sc.close();
+        if (num < 0) return "Not Perfect Square";
 
+        int sqrt = (int) Math.sqrt(num);
+
+        if (sqrt * sqrt == num) {
+            return "is Perfect Square Difference";
+        } else {
+            return "Not Perfect Square";
+        }
+    }
 }
-
-static String isPerfect(int a,int b){
-
-int num = a-b;
-
-if(num\<0) return \"Not Perfect Square\";
-
-int sqrt = (int) Math.sqrt(num);
-
-if(sqrt\*sqrt == num){
-
-return \"is Perfect Square Difference\";
-
-}
-
-else{
-
-return \"Not Perfect Square\";
-
-}
-
-}
-
-}
-
-![](media/image6.png){width="2.9930555555555554in"
-height="1.1458333333333333in"}![](media/image7.png){width="2.9722222222222223in"
-height="1.125in"}
+```
 
 ## 
 
@@ -699,40 +606,29 @@ Accept 3 numbers via command-line and print:\
 • Difference between them
 
 Answer:
+```java
+class CommandLine {
 
-class commandline{
+    public static void main(String[] args) {
+        validate(args);
+    }
 
-public static void main(String args\[\]){
+    static void validate(String[] args) {
 
-validate(args);
+        int num1 = Integer.parseInt(args[0]);
+        int num2 = Integer.parseInt(args[1]);
+        int num3 = Integer.parseInt(args[2]);
 
+        int largest = Math.max(num1, Math.max(num2, num3));
+        int smallest = Math.min(num1, Math.min(num2, num3));
+        int difference = largest - smallest;
+
+        System.out.println("Largest number: " + largest);
+        System.out.println("Smallest number: " + smallest);
+        System.out.println("Difference: " + difference);
+    }
 }
-
-static void validate(String args\[\]){
-
-int num1 = Integer.parseInt(args\[0\]);
-
-int num2 = Integer.parseInt(args\[1\]);
-
-int num3 = Integer.parseInt(args\[2\]);
-
-int largest = Math.max(num1, Math.max(num2, num3));
-
-int smallest = Math.min(num1, Math.min(num2, num3));
-
-int difference = largest - smallest;
-
-System.out.println(\"Largest number: \" + largest);
-
-System.out.println(\"Smallest number: \" + smallest);
-
-System.out.println(\"Difference: \" + difference);
-
-}
-
-}
-
-![](media/image8.png){width="6.5in" height="0.9027777777777778in"}
+```
 
 ## Task 9: Array Trend Detector
 
@@ -746,52 +642,39 @@ Return:\
 • \"Mixed\" otherwise
 
 Answer:
+```java
+class ArrTrend {
 
-class arrTrend{
+    public static void main(String[] args) {
 
-public static void main(String\[\] args){
+        int[] arr = {1, 4, 3, 5, 2};
 
-int\[\] arr = {1,4,3,5,2};
+        System.out.println(trend(arr));
+    }
 
-System.out.print(trend(arr));
+    static String trend(int[] arr) {
 
+        boolean increasing = true;
+        boolean decreasing = true;
+
+        for (int i = 1; i < arr.length; i++) {
+
+            if (arr[i] > arr[i - 1]) {
+                decreasing = false;
+            } else if (arr[i] < arr[i - 1]) {
+                increasing = false;
+            } else {
+                increasing = false;
+                decreasing = false;
+            }
+        }
+
+        if (increasing) return "Increasing";
+        if (decreasing) return "Decreasing";
+        return "Mixed";
+    }
 }
-
-static String trend(int\[\] arr){
-
-boolean increasing = true;
-
-boolean decreasing = true;
-
-for (int i=1; i\<arr.length; i++){
-
-if (arr\[i\]\>arr\[i-1\]){
-
-decreasing = false;
-
-} else if (arr\[i\]\<arr\[i-1\]){
-
-increasing = false;
-
-} else {
-
-increasing = false;
-
-decreasing = false;
-
-}
-
-}
-
-if (increasing) return \"Increasing\";
-
-if (decreasing) return \"Decreasing\";
-
-return \"Mixed\";
-
-}
-
-}![](media/image9.png){width="4.4375in" height="0.9444444444444444in"}
+```
 
 ## Task 10: Mini Decision Engine
 
@@ -806,114 +689,62 @@ Return:\
 • \"Invalid\" if n ≤ 1
 
 Answer:
+```java
+class MiniDec {
 
-class miniDec{
+    public static void main(String[] args) {
 
-public static void main(String\[\] args) {
+        int[] arr = {2, 3, 4, 1, 17, 20};
 
-int\[\] arr = {2, 3, 4, 1, 17, 20};
+        for (int n : arr) {
+            System.out.println(n + " : " + decision(n));
+        }
+    }
 
-for (int n : arr) {
+    static String decision(int n) {
 
-System.out.println(n + \" : \" + decision(n));
+        if (n <= 1) {
+            return "Invalid";
+        }
 
+        if (n == 2) {
+            return "Prime Even";
+        }
+
+        if (isPrime(n)) {
+            return "Prime Odd";
+        }
+
+        return "Composite";
+    }
+
+    static boolean isPrime(int num) {
+
+        if (num <= 1) return false;
+
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) return false;
+        }
+
+        return true;
+    }
 }
-
-}
-
-static String decision(int n) {
-
-if (n \<= 1) {
-
-return \"Invalid\";
-
-}
-
-if (n == 2) {
-
-return \"Prime Even\";
-
-}
-
-if (isPrime(n)) {
-
-return \"Prime Odd\";
-
-}
-
-return \"Composite\";
-
-}
-
-static boolean isPrime(int num) {
-
-if (num \<= 1) return false;
-
-for (int i = 2; i \* i \<= num; i++) {
-
-if (num % i == 0) return false;
-
-}
-
-return true;
-
-}
-
-}![](media/image10.png){width="4.131944444444445in"
-height="1.4583333333333333in"}
+```
 
 ## 
 
 ## Task 11: Debugging Practice 
 
-+-----------------------+-----------------------+-----------------------+
-| Broken Code           | Find the Error        | Fix It                |
-+=======================+=======================+=======================+
-| int\[\] a = new       | Index \[5\] out of    | int\[\] a = new       |
-| int\[5\]; a\[5\] =    | bound error in java   | int\[5\]; a\[4\] =    |
-| 10;                   | array is indexed from | 10;                   |
-|                       | \[0\]                 |                       |
-+-----------------------+-----------------------+-----------------------+
-| int sum; for(int      | Variable sum is not   | int sum=0; for(int    |
-| i                     | initialized to 0      | i                     |
-| =0;i\<arr.length;i++) |                       | =0;i\<arr.length;i++) |
-| sum+=arr\[i\];        |                       | sum+=arr\[i\];        |
-+-----------------------+-----------------------+-----------------------+
-| static int            | Initializing m =0 but | int m = arr\[0\];     |
-| max(int\[\] arr){ int | in case of negative   |                       |
-| m=0; \... }           | numbers it would give |                       |
-|                       | error                 |                       |
-+-----------------------+-----------------------+-----------------------+
-| switch(x){ case 1:    | Break missing after   | switch(x){ case 1:    |
-| System.               | switch statement case | System.               |
-| out.println(\"One\"); |                       | out.println(\"One\"); |
-| case 2: \... }        |                       | break;                |
-|                       |                       |                       |
-|                       |                       | case 2: \... }        |
-+-----------------------+-----------------------+-----------------------+
-| Integer               | Integer I capital is  | integer               |
-| .parseInt(args\[0\]); | error                 | .parseInt(args\[0\]); |
-+-----------------------+-----------------------+-----------------------+
-| static void calc(int  | Method type is void   | static int calc(int   |
-| a,int b){ return a+b; | but returning integer | a,int b){ return a+b; |
-| }                     |                       | }                     |
-+-----------------------+-----------------------+-----------------------+
-| return                | Wrong indexed in java | return                |
-| arr\[arr.length\];    | arrays are 0 index    | arr\[arr.length-1\];  |
-+-----------------------+-----------------------+-----------------------+
-| static String day(int | Default should return | static String day(int |
-| d){ switch(d){ case   | string "Invalid"      | d){ switch(d){ case   |
-| 1: return \"Mon\";    |                       | 1: return \"Mon\";    |
-| case 2: return        |                       | case 2: return        |
-| \"Tue\"; default:     |                       | \"Tue\"; default:     |
-| \"Invalid\"; } }      |                       | return \"Invalid\"; } |
-|                       |                       | }                     |
-+-----------------------+-----------------------+-----------------------+
-| static int add(int    | Return type int but   | static int add(int    |
-| a,int b){             | returning nothimg     | a,int b){ return      |
-| Sys                   |                       | (a+b); }              |
-| tem.out.println(a+b); |                       |                       |
-| }                     |                       |                       |
-+-----------------------+-----------------------+-----------------------+
+| Broken Code                     | Find the Error                               | Fix It                                 |
+|---------------------------------|----------------------------------------------|----------------------------------------|
+| `int[] a = new int[5]; a[5] = 10;` | Index `[5]` out of bound error in Java. Arrays are 0-indexed | `int[] a = new int[5]; a[4] = 10;` |
+| `int sum; for(int i=0;i<arr.length;i++) sum+=arr[i];` | Variable `sum` is not initialized to 0 | `int sum=0; for(int i=0;i<arr.length;i++) sum+=arr[i];` |
+| `static int max(int[] arr){ int m=0; ... }` | Initializing `m = 0` but in case of negative numbers it would give error | `int m = arr[0]; ...` |
+| `switch(x){ case 1: System.out.println("One"); case 2: ... }` | Break missing after switch statement case | `switch(x){ case 1: System.out.println("One"); break; case 2: ... }` |
+| `Integer.parseInt(args[0]);` | `Integer` with capital I is fine in Java but may confuse beginners | `int.parseInt(args[0]);` (or `Integer.parseInt(args[0])` is correct) |
+| `static void calc(int a,int b){ return a+b; }` | Method type is `void` but returning integer | `static int calc(int a,int b){ return a+b; }` |
+| `return arr[arr.length];` | Wrong index; arrays are 0-indexed | `return arr[arr.length-1];` |
+| `static String day(int d){ switch(d){ case 1: return "Mon"; case 2: return "Tue"; default: "Invalid"; } }` | Default should return string `"Invalid"` | `static String day(int d){ switch(d){ case 1: return "Mon"; case 2: return "Tue"; default: return "Invalid"; } }` |
+| `static int add(int a,int b){ System.out.println(a+b); }` | Return type `int` but returning nothing | `static int add(int a,int b){ return (a+b); }` |
 
 ## 
