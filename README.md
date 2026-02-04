@@ -7,7 +7,7 @@ Object-Oriented Programming lab exercises in Java covering fundamental programmi
 [View Lab 1](./Lab1.md)\
 [View Lab 2](./Lab2.md)\
 [View Lab 3](./Lab3.md)
- ```
+ 
 
 ### Lab 1: Introduction to Java Programming
 Introduction to Java fundamentals including history, features, installation, basic syntax, variables, data types, input/output operations, and type conversion.
@@ -127,5 +127,3 @@ This repository is for educational purposes. Feel free to use it for learning.
 **Course:** CSC-150 - Object Oriented Programming  
 **Semester:** Spring 2026  
 **Student At:** Sukkur IBA University
-
-Happy Coding! 🎉
