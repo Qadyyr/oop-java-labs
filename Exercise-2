@@ -1,0 +1,38 @@
+# Exercise 2: Mathematical Expressions
+
+## Problem Statement
+
+Write Java code to identify if the given input by the user is even or odd.
+
+## Requirements
+
+- Take an integer input from the user
+- Determine if the number is even or odd
+- Display the result
+
+## Concepts Used
+
+- Scanner class for input
+- Modulo operator (%)
+- if-else statements
+
+## Expected Output
+
+```
+Enter any number to check whether it is even or odd: 
+15
+15 is Odd
+```
+
+OR
+
+```
+Enter any number to check whether it is even or odd: 
+20
+20 is Even
+```
+
+## Logic
+
+- A number is even if `number % 2 == 0`
+- A number is odd if `number % 2 != 0`
