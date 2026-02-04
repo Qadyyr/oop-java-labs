@@ -70,8 +70,8 @@ Core object-oriented programming concepts including objects, instance methods, c
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/YOUR-USERNAME/OOP-Spring2026.git
-   cd OOP-Spring2026
+   git clone https://github.com/qadyyr/oop-java-labs.git
+   cd oop-java-labs
    ```
 
 2. **Navigate to a lab and read the markdown file** for theory and exercises
