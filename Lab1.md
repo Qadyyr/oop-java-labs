@@ -1,20 +1,5 @@
-+---------------------------+------------------------------------------+
-| ![](media/ima             | CSC-150 -- Object Oriented Programming   |
-| ge1.png){width="2.4375in" |                                          |
-| heigh                     |                                          |
-| t="0.5673490813648294in"} |                                          |
-+===========================+==========================================+
-|                           | Semester II (Spring 2026)                |
-|                           |                                          |
-|                           | Modified by: Saif Hassan                 |
-+---------------------------+------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| ### Lab 01                                                            |
-|                                                                       |
-| # **Introduction to Java programming**                                |
-+=======================================================================+
-+-----------------------------------------------------------------------+
+### Lab 01
+# **Introduction to Java programming**
 
 **Objectives:**
 
@@ -153,8 +138,7 @@ hand you a Java program and you can run it on your machine
 
 **JDK**
 
--   ![](media/image2.PNG){width="2.53125in"
-    height="2.1458333333333335in"}It stands for Java Development Kit, is
+-   It stands for Java Development Kit, is
     a software development environment used for developing Java
     applications and applets.
 
@@ -205,10 +189,6 @@ through command line or the permanent path which can be set using
 properties of 'this PC', go to advanced system setting and then
 Environment variable.
 
-![](media/image3.jpeg){width="6.3125in" height="3.15625in"}
-
-![](media/image4.jpeg){width="6.3125in" height="3.59375in"}
-
   -----------------------------------------------------------------------
   5: **Writing HelloWorld.java in Text Editor**
   -----------------------------------------------------------------------
@@ -220,8 +200,6 @@ Follow the below given steps:
 i.  Run notepad and enter below given code. Save this file with Class
     name and end it with ".java" extension. Save it on desktop for now!
 
-![](media/image5.png){width="4.7483147419072615in"
-height="2.0484984689413825in"}
 
 ii. Go to search bar in taskbar, write cmd and Open Command Prompt then
     write the following commands;
@@ -277,8 +255,8 @@ static variable per class, regardless of how many objects are created.
 variables are declared public since they must be available for users of
 the class
 
-**[Example: Types of Variables in Java]{.underline}**
-
+**Example: Types of Variables in Java**
+```java
 class Variab {
 
 int InsVarExam = 29; //instance variable
@@ -289,10 +267,10 @@ void method() {
 
 int IsLocalVar = 90; //local variable
 
-}
+    }
 
 }
-
+```
 **Data Types in Java**
 
 Data types classify the different values to be stored in the variable.
@@ -314,7 +292,7 @@ There are 8 primitive types: byte, short, int, long, char, float,
 double, and boolean 
 
 **Integer data types**
-
+```
 byte (1 byte)
 
 short (2 bytes)
@@ -322,21 +300,22 @@ short (2 bytes)
 int (4 bytes)
 
 long (8 bytes)
-
+```
 **Floating Data Type**
-
+```
 float (4 bytes)
 
 double (8 bytes)
+```
 
 **Textual Data Type**
-
+```
 char (2 bytes)
-
-Logical
-
+```
+**Logical**
+```
 boolean (1 bit) (true/false)
-
+```
   -----------------------------------------------------------------------
   7: **Input & Output**
   -----------------------------------------------------------------------
@@ -344,41 +323,36 @@ boolean (1 bit) (true/false)
   -----------------------------------------------------------------------
 
 **Output in Java Syntax:**
-
+```java
 System.out.println(\"Hello World\");
-
+```
 **Input in Java Syntax:**
-
+```java
 // import library
 
 import java.util.Scanner;
 
 // Creating scanner object
 
-Scanner ip = new Scanner(System.in); //system.in represents that the
-input is given via keyboard
+Scanner ip = new Scanner(System.in); //system.in represents that the input is given via keyboard
 
-Taking input from user
+//Taking input from user
 
 int ipFrmUser = ip.nextInt(); // Integer Input
 
 double ipDbUser = ip.nextDouble(); // Double Input
-
+```
   -----------------------------------------------------------------------
   8: **Java Variable Type Conversion & Type Casting**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-![Diagram Description automatically
-generated](media/image6.jpg){width="2.5in"
-height="2.0743055555555556in"}A variable of one type can receive the
+A variable of one type can receive the
 value of another type. Here there are 2 cases.
 
 **Case 1**:Variable of smaller capacity is be assigned to another
 variable of bigger capacity.\
- ![Java Variables and Data Types](media/image7.jpeg){width="1.5625in"
-height="0.9694444444444444in"}
 
 This process is Automatic, and non-explicit is known as **type
 conversion**
@@ -386,10 +360,6 @@ conversion**
 **Case 2**: Variable of larger capacity is be assigned to another
 variable of smaller capacity.\
  
-
-![Java Variables and Data
-Types](media/image8.jpeg){width="1.998713910761155in"
-height="1.6200339020122485in"}
 
 In such cases, you have to explicitly specify the type cast operator.
 This process is known as **type casting**.\
@@ -399,41 +369,32 @@ programmer aware that the conversion he is about to do may cause some
 loss in data and prevents accidental losses.\
 \
 **Example: To Understand Type Casting**
-
+```java
 class Demo {
+    public static void main(String[] args) {
 
-public static void main(String args\[\]) {
+        byte x;
+        int a = 270;
+        double b = 128.128;
 
-byte x;
+        System.out.println("int converted to byte");
+        x = (byte) a;
+        System.out.println("a and x " + a + " " + x);
 
-int a = 270;
+        System.out.println("double converted to int");
+        a = (int) b;
+        System.out.println("b and a " + b + " " + a);
 
-double b = 128.128;
-
-System.out.println(\"int converted to byte\");
-
-x = (byte) a;
-
-System.out.println(\"a and x \" + a + \" \" + x);
-
-System.out.println(\"double converted to int\");
-
-a = (int) b;
-
-System.out.println(\"b and a \" + b + \" \" + a);
-
-System.out.println(\"\\ndouble converted to byte\");
-
-x = (byte)b;
-
-System.out.println(\"b and x \" + b + \" \" + x);
-
+        System.out.println("\ndouble converted to byte");
+        x = (byte) b;
+        System.out.println("b and x " + b + " " + x);
+    }
 }
 
-}
-
+```
 **Output**:
 
+```
 int converted to byte
 
 a and x 270 14
@@ -445,48 +406,42 @@ b and a 128.128 128
 double converted to byte
 
 b and x 128.128 -128
-
-**\
-**
+```
 
 **Arrays in Java**
-
+```java
 import java.util.Scanner;
 
 class ArrayExample {
+    public static void main(String[] args) {
 
-public static void main(String\[\] args) {
+        Scanner sc = new Scanner(System.in);
 
-Scanner sc = new Scanner(System.in);
+        int[] arr = new int[5]; // Array declaration
 
-int\[\] arr = new int\[5\]; // Array declaration
+        System.out.println("Enter 5 integers:");
 
-System.out.println(\"Enter 5 integers: \");
+        for (int i = 0; i < 5; i++) {
+            arr[i] = sc.nextInt();
+        }
 
-for (int i = 0; i \< 5; i++) {
+        System.out.println("You entered:");
 
-arr\[i\] = sc.nextInt();
+        for (int i = 0; i < 5; i++) {
+            System.out.println(arr[i]);
+        }
 
+        sc.close();
+    }
 }
 
-System.out.println(\"You entered: \");
-
-for (int i = 0; i \< 5; i++) {
-
-System.out.println(arr\[i\]);
-
-}
-
-}
-
-}
-
+```
 **Output**
-
+```
 Enter 5 integers: 10 20 30 40 50
 
 You entered: 10 20 30 40 50
-
+```
 **Lab Tasks**
 
 Marks : 10, All Questions carry equal marks
@@ -497,7 +452,7 @@ Set up a Java development environment. In the main() method of your
 program try to compile the following invalid Java code snippets. Record
 the error messages you receive. What do you think each error message
 indicates?
-
+```
 System.out.printn("Hello World")
 
 System.out.printn(Hello World)
@@ -505,19 +460,19 @@ System.out.printn(Hello World)
 System.out.println"Hello World";
 
 println("Hello World);
-
+```
 To generate one final error message, remove one of the brackets from the
 end of your program. Now what message do you receive?
 
 Answer:
-
+```
 1: illegal characters and semicolon is not used
 
 2: quotation marks and semicolon missing
 
 3: illegal characters quotation marks not used correctly brackets
 missing
-
+```
 4: illegal characters and semicolon missing
 
 **Exercise 2 (Mathematical Expressions)**
@@ -526,36 +481,28 @@ Write Java code to identify if the given input by the user is even or
 odd.
 
 Answer:
-
+```java
 import java.util.Scanner;
 
 public class Main {
+    public static void main(String[] args) {
 
-public static void main(String\[\] args) {
+        Scanner sc = new Scanner(System.in);
 
-Scanner sc = new Scanner(System.in);
+        System.out.print("Enter any number to check whether it is even or odd: ");
+        int a = sc.nextInt();
 
-System.out.println(\"Enter any number to check whether it is even or odd
-: \");
+        if (a % 2 == 0) {
+            System.out.println(a + " is Even");
+        } else {
+            System.out.println(a + " is Odd");
+        }
 
-int a = sc.nextInt();
-
-if (a%2==0){
-
-System.out.print(a + \" is Even\");
-
-} else {
-
-System.out.print(a + \" is Odd\");
-
+        sc.close();
+    }
 }
 
-}
-
-}
-
-![](media/image9.png){width="3.263888888888889in"
-height="1.3055555555555556in"}
+```
 
 **Exercise 3 (Type casting)**
 
@@ -563,27 +510,23 @@ Perform division using two double variables and store the result in int
 variable and print the results
 
 Answer:
-
+```java
 public class Main {
+    public static void main(String[] args) {
 
-public static void main(String\[\] args) {
+        double a = 7852.3333797708;
+        double b = 399.22227968543;
 
-double a = 7852.3333797708;
+        System.out.println("a: " + a);
+        System.out.println("b: " + b);
 
-double b = 399.22227968543;
+        int c = (int) (a / b);
 
-System.out.println(\"a :\" + a);
-
-System.out.println(\"b :\" + b);
-
-int c = (int)(a/b);
-
-System.out.println(\"a/b :\" + c);
-
+        System.out.println("a/b: " + c);
+    }
 }
 
-}![](media/image10.png){width="4.020833333333333in"
-height="1.4715277777777778in"}
+```
 
 **Exercise 4 (Operators)**
 
@@ -597,47 +540,36 @@ Enter value b:10
 Enter value c:70
 
 Answer:
-
+```java
 import java.util.Scanner;
 
 public class Main {
+    public static void main(String[] args) {
 
-public static void main(String\[\] args) {
+        Scanner sc = new Scanner(System.in);
 
-Scanner sc = new Scanner(System.in);
+        System.out.print("Enter value a: ");
+        int a = sc.nextInt();
 
-System.out.print(\"Enter value a :\");
+        System.out.print("Enter value b: ");
+        int b = sc.nextInt();
 
-int a = sc.nextInt();
+        System.out.print("Enter value c: ");
+        int c = sc.nextInt();
 
-System.out.print(\"Enter value b :\");
+        if (a >= b && a >= c) {
+            System.out.println(a + " is largest");
+        } else if (b >= a && b >= c) {
+            System.out.println(b + " is largest");
+        } else {
+            System.out.println(c + " is largest");
+        }
 
-int b = sc.nextInt();
-
-System.out.print(\"Enter value c :\");
-
-int c = sc.nextInt();
-
-if(a\>=b && a\>=c){
-
-System.out.print(a + \" is lasgest\");
-
-} else if(b\>=a && b\>=c){
-
-System.out.print(b + \" is largest\");
-
-} else if(c\>=a && c\>=b){
-
-System.out.print(c + \" is largest\");
-
+        sc.close();
+    }
 }
 
-}
-
-}
-
-![](media/image11.png){width="4.090277777777778in"
-height="1.7458333333333333in"}
+```
 
 **Exercise 5 (if/else, Array)**
 
@@ -654,88 +586,68 @@ following tasks:
 4.  Print elements in **reverse order**
 
 > Answer:
->
-> import java.util.Scanner;
->
-> public class Main {
->
-> public static void main(String\[\] args) {
->
-> Scanner sc = new Scanner(System.in);
->
-> int\[\] arr = new int\[5\];
->
-> int count = 0;
->
-> System.out.println(\"Enter Elements of array :\");
->
-> for(int i=0; i\<5; i++){
->
-> arr\[i\] =sc.nextInt();
->
-> }
->
-> int largest = arr\[0\];
->
-> for (int i=0; i\<5; i++){
->
-> if(arr\[i\]\>largest){
->
-> largest = arr\[i\];
->
-> }
->
-> }
->
-> System.out.println(largest + \" is largest\");
->
-> System.out.print(\"Enter any number to search in array: \");
->
-> int num =sc.nextInt();
->
-> boolean found = false;
->
-> for (int i=0; i\<5; i++){
->
-> if (arr\[i\]==num){
->
-> System.out.println(num + \" found at index : \" + i);
->
-> found = true;
->
-> break;
->
-> }
->
-> } if(!found){
->
-> System.out.println(num + \" not found\");
->
-> }
->
-> for (int i=0; i\<5; i++){
->
-> if (arr\[i\]%2==0){
->
-> count++;
->
-> }
->
-> } System.out.println(\"there are \" + count + \" even number in
-> array\");
->
-> System.out.println(\"Elements or array in reverse order :\");
->
-> for (int i=arr.length-1; i\>=0; i\--){
->
-> System.out.print(arr\[i\] + \" \");
->
-> }
->
-> }
->
-> }![](media/image12.png){width="4.777777777777778in"
-> height="2.4930555555555554in"}
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int[] arr = new int[5];
+        int count = 0;
+
+        System.out.println("Enter Elements of array :");
+
+        for (int i = 0; i < 5; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int largest = arr[0];
+
+        for (int i = 0; i < 5; i++) {
+            if (arr[i] > largest) {
+                largest = arr[i];
+            }
+        }
+
+        System.out.println(largest + " is largest");
+
+        System.out.print("Enter any number to search in array: ");
+        int num = sc.nextInt();
+
+        boolean found = false;
+
+        for (int i = 0; i < 5; i++) {
+            if (arr[i] == num) {
+                System.out.println(num + " found at index : " + i);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println(num + " not found");
+        }
+
+        for (int i = 0; i < 5; i++) {
+            if (arr[i] % 2 == 0) {
+                count++;
+            }
+        }
+
+        System.out.println("there are " + count + " even number in array");
+
+        System.out.println("Elements or array in reverse order :");
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+```
 
 **Exercise 6 (Debugging Practice)**
 
@@ -743,76 +655,17 @@ Run the code, find/name the error, write in your own words (1-2 lines
 max) in 2nd column and solve it in 3rd column with minimal changes in
 it.
 
-+----------------------------+------------------+----------------------+
-| **Code**                   | **               | **Fix**              |
-|                            | Error/Analysis** |                      |
-+============================+==================+======================+
-| int\[\] arr = new          | Index out of     | for (int i = 0; i \< |
-| int\[5\];                  | bound, means     | 5; i++)              |
-|                            | array size is 5  |                      |
-| for (int i = 0; i \<= 5;   | and we are       | removing equal sign. |
-| i++) {                     | accessing        |                      |
-|                            | arr\[5\] index,  |                      |
-| arr\[i\] = i \* 10;        | we can not       |                      |
-|                            | access index 5   |                      |
-| }                          | in arr\[5\] of   |                      |
-|                            | size 5.          |                      |
-+----------------------------+------------------+----------------------+
-| int\[\] arr;               | arr is not       | Int\[2\] arr;        |
-|                            | initialized      |                      |
-| arr\[0\] = 10;             |                  |                      |
-+----------------------------+------------------+----------------------+
-| class InputTest {          | Not imported     | import               |
-|                            | package Scanner  | java.util.Scanner    |
-| public static void         |                  |                      |
-| main(String\[\] args) {    |                  | class InputTest {    |
-|                            |                  |                      |
-| Scanner sc = new           |                  | public static void   |
-| Scanner(System.in);        |                  | main(String\[\]      |
-|                            |                  | args) {              |
-| int x = sc.nextInt();      |                  |                      |
-|                            |                  | Scanner sc = new     |
-| }                          |                  | Scanner(System.in);  |
-|                            |                  |                      |
-| }                          |                  | int x =              |
-|                            |                  | sc.nextInt();        |
-|                            |                  |                      |
-|                            |                  | }                    |
-|                            |                  |                      |
-|                            |                  | }                    |
-+----------------------------+------------------+----------------------+
-| for (int i = 0; i \< 5;    | Infinite loop    | for(int i = 0; i\<5; |
-| i\--) {                    |                  | i++)                 |
-|                            |                  |                      |
-| System.out.println(i);     |                  |                      |
-|                            |                  |                      |
-| }                          |                  |                      |
-+----------------------------+------------------+----------------------+
-| int\[\] arr = new          | There is no      | int\[\] arr = new    |
-| int\[3\];                  | error arr\[0\]   | int\[3\];            |
-|                            | is automatically |                      |
-| Sys                        | assigned value 0 | System.ou            |
-| tem.out.println(arr\[0\]); |                  | t.println(arr\[0\]); |
-+----------------------------+------------------+----------------------+
-| int x = 5;                 | = is assignment  | int x = 5;           |
-|                            | operator not     |                      |
-| if (x = 5) {               | logical so int   | if (x == 5) {        |
-|                            | can not be       |                      |
-| Syst                       | converted to     | System.out           |
-| em.out.println(\"Equal\"); | boolean          | .println(\"Equal\"); |
-|                            |                  |                      |
-| }                          |                  | }                    |
-+----------------------------+------------------+----------------------+
-| Scanner sc = new           | Scanner class is | import               |
-| Scanner(System.in);s       | not imported     | java.util.Scanner;   |
-|                            |                  |                      |
-| int n = sc.nextInt();      | Second, trying   | and                  |
-|                            | to assign index  |                      |
-| int\[\] arr = new          | 10 in arr of     | arr\[n-1\] = 10;     |
-| int\[n\];                  | size 10 which is |                      |
-|                            | not allowed      |                      |
-| arr\[n\] = 10;             |                  |                      |
-+----------------------------+------------------+----------------------+
+| **Code**                   | **Error / Analysis**       | **Fix**                    |
+|-----------------------------|---------------------------|----------------------------|
+| `int[] arr = new int[5];`  | Index out of bounds — array size is 5 and we are accessing arr[5] | `for (int i = 0; i < 5; i++)` (remove equal sign) |
+| `for (int i = 0; i <= 5; i++) { arr[i] = i * 10; }` | Accessing index 5 is invalid | Change loop condition to `i < 5` |
+| `int[] arr; arr[0] = 10;` | Array is not initialized | `int[] arr = new int[2]; arr[0] = 10;` |
+| `class InputTest { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int x = sc.nextInt(); } }` | Scanner class not imported | Add `import java.util.Scanner;` before class |
+| `for (int i = 0; i < 5; i--) { System.out.println(i); }` | Infinite loop — i is decreasing instead of increasing | Change to `for (int i = 0; i < 5; i++)` |
+| `int[] arr = new int[3]; System.out.println(arr[0]);` | No error — arr[0] automatically initialized to 0 | No fix needed |
+| `int x = 5; if (x = 5) { System.out.println("Equal"); }` | `=` is assignment, not comparison — cannot convert int to boolean | Use `if (x == 5)` |
+| `Scanner sc = new Scanner(System.in); int n = sc.nextInt(); int[] arr = new int[n]; arr[n] = 10;` | Trying to assign arr[n] — invalid index (0 to n-1) | Change to `arr[n-1] = 10;` and ensure Scanner is imported |
+
 
   -----------------------------------------------------------------------
   **Post lab questions to ponder**
