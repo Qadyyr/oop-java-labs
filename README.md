@@ -2,7 +2,7 @@
 
 My lab solutions for Object-Oriented Programming course at **Sukkur IBA University**. I'm documenting my learning journey through Java programming, from basic syntax to advanced OOP concepts.
 
->  **Student Repository** - Solutions uploaded as I complete each lab
+>  **Repository** - Solutions uploaded as I complete each lab
 
  [View Lab 1](./Lab1.md)\
  [View Lab 2](./Lab2.md)\
