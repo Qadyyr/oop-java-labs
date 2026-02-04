@@ -3,6 +3,9 @@
 Object-Oriented Programming lab exercises in Java covering fundamental programming concepts through advanced OOP principles.
 
 ## 📚 Labs Overview
+[View Lab 1](./Lab1.md)
+[View Lab 2](./Lab2.md)
+[View Lab 3](./Lab3.md)
 
 ### Lab 1: Introduction to Java Programming
 Introduction to Java fundamentals including history, features, installation, basic syntax, variables, data types, input/output operations, and type conversion.
@@ -95,16 +98,6 @@ Core object-oriented programming concepts including objects, instance methods, c
 - Working with objects and classes
 - Debugging and error handling
 
-## 📝 Repository Structure
-
-```
-OOP-Spring2026/
-├── README.md          # This file
-├── Lab1.md           # Lab 1: Introduction to Java
-├── Lab2.md           # Lab 2: Methods in Java
-└── Lab3.md           # Lab 3: Objects & Encapsulation
-```
-
 ## 💡 Tips for Success
 
 - Read through the theory sections carefully before attempting exercises
@@ -131,6 +124,6 @@ This repository is for educational purposes. Feel free to use it for learning.
 
 **Course:** CSC-150 - Object Oriented Programming  
 **Semester:** Spring 2026  
-**Institution:** [Your Institution Name]
+**Student At:** Sukkur IBA University
 
 Happy Coding! 🎉
