@@ -1,0 +1,42 @@
+# Exercise 1: JAVA Environment Installation & Error Messages
+
+## Problem Statement
+
+Set up a Java development environment. In the main() method of your program, try to compile the following invalid Java code snippets. Record the error messages you receive. What do you think each error message indicates?
+
+## Invalid Code Snippets to Test
+
+1. `System.out.printn("Hello World")`
+2. `System.out.printn(Hello World)`
+3. `System.out.println"Hello World";`
+4. `println("Hello World);`
+5. Remove one of the brackets from the end of your program
+
+## Tasks
+
+1. Set up Java Development Kit (JDK)
+2. Set up environment variables (JAVA_HOME, PATH)
+3. Create a simple Java program
+4. Test each invalid code snippet
+5. Document the error messages
+6. Explain what each error means
+
+## Expected Errors
+
+For each snippet, you should see different compiler errors:
+- Method not found
+- Missing semicolon
+- Syntax errors
+- Missing quotes
+- Unmatched brackets
+
+## Learning Outcomes
+
+- Understanding Java compilation process
+- Reading and interpreting compiler error messages
+- Importance of syntax in Java
+- Setting up development environment
+
+## Solution Notes
+
+The solution file contains the error analysis for each invalid code snippet.
