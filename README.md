@@ -61,7 +61,23 @@ Core object-oriented programming concepts including objects, instance methods, c
 [View Lab 3](./Lab3.md)
 
 ---
+### Lab 4: Inheritance & Polymorphism
 
+Core object-oriented programming concepts including class hierarchies, inheritance, method overriding, and polymorphic behavior.
+
+## Topics Covered:
+* Inheritance and the `extends` keyword
+* Superclass and subclass relationships
+* Method overriding
+* The `super` keyword
+* Polymorphism and dynamic binding
+* Abstract classes and methods
+* The `instanceof` operator
+* Access modifiers (`protected`)
+
+[View Lab 4](./Lab4.md)
+
+---
 ##  About This Repository
 
 This repository contains my lab solutions for the Object-Oriented Programming course at **Sukkur IBA University**. I'm uploading my solutions as I complete each lab to track my progress and share my learning journey.
