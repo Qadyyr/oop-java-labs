@@ -7,7 +7,7 @@ My lab solutions for Object-Oriented Programming course at **Sukkur IBA Universi
  [View Lab 1](./Lab1.md)\
  [View Lab 2](./Lab2.md)\
  [View Lab 3](./Lab3.md)\
- [View Lab 3](./Lab3.md)
+ [View Lab 4](./Lab4.md)
 
 
 ##  Labs Overview
