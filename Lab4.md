@@ -780,6 +780,74 @@ GPA: 3.90
 
 ---
 
+
+Main.java
+```java
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        Student s2 = new Student("John Doe", 12345, 3.75);
+        
+        s1.displayInfo();
+        s2.displayInfo();
+        
+        s1.setName("Jane Smith");
+        s1.setStudentId(12346);
+        s1.setGpa(3.90);
+        s1.displayInfo();
+    }
+}
+
+```
+Student.java
+```java
+class Student {
+	
+	private String name;
+	private int studentId;
+	private double gpa;
+
+	Student(){
+		name = "Unknown";
+		studentId = 0;
+		gpa = 0.0;
+	}
+
+	Student(String name,int studentId,double gpa){
+		this.name = name;
+		this.studentId = studentId;
+		this.gpa = gpa;
+	}
+
+	String getName(){
+		return name;
+	}
+	int getStudentId(){
+		return studentId;
+	}
+	double getGpa(){
+		return gpa;
+	}
+	void setName(String name){
+		this.name = name;
+	}
+	void setStudentId(int studentId){
+		this.studentId = studentId;
+	}
+	void setGpa(double gpa){
+		this.gpa = gpa;
+	}
+
+	void displayInfo(){
+		System.out.println("Student Information:");
+		System.out.println("Student Name : " + name);
+		System.out.println("Student ID : " + studentId);
+		System.out.println("Student GPA : " + gpa);
+		System.out.println();
+	}
+
+}
+```
 ### Task 2: Add Control Flow Methods
 
 **Modify your Student class from Task 1** by adding the following methods:
@@ -824,6 +892,114 @@ Student ID: 12346
 GPA: 3.90
 ```
 
+```java
+class Student {
+	
+	private String name;
+	private int studentId;
+	private double gpa;
+
+	Student(){
+		name = "Unknown";
+		studentId = 0;
+		gpa = 0.0;
+	}
+
+	Student(String name,int studentId,double gpa){
+		this.name = name;
+		this.studentId = studentId;
+		this.gpa = gpa;
+	}
+
+	String getName(){
+		return name;
+	}
+	int getStudentId(){
+		return studentId;
+	}
+	double getGpa(){
+		return gpa;
+	}
+	void setName(String name){
+		this.name = name;
+	}
+	void setStudentId(int studentId){
+		this.studentId = studentId;
+	}
+	void setGpa(double gpa){
+		this.gpa = gpa;
+	}
+
+	void displayInfo(){
+		System.out.println("Student Information:");
+		System.out.println("Student Name : " + name);
+		System.out.println("Student ID : " + studentId);
+		System.out.println("Student GPA : " + gpa);
+		System.out.println();
+	}
+
+	char calculateGrade(){
+		if(gpa >= 3.7) return 'A';
+		else if (gpa >= 3) return 'B';
+		else if (gpa >= 2) return 'C';
+		else if (gpa >= 1) return 'D';
+		else return 'F';
+    }
+	String getGradeLetter(){
+		int level = 0;
+
+		if (gpa >= 3.7) level = 4;
+		else if (gpa >= 3) level = 3;
+		else if (gpa >= 2) level = 2;
+		else if (gpa >= 1) level = 1;
+
+		switch(level){
+		case 4:
+			return "A";
+		case 3:
+			return "B";
+		case 2:
+			return "C";
+		case 1:
+			return "D";
+		default:
+			return "F";
+		}
+	}
+
+	boolean isHonorStudent(){
+		return (gpa > 3.5 ) ? true : false;
+	}
+
+	void updateGPA(double newGPA){
+		if (newGPA>= 0.0 && newGPA <= 4.0){
+			gpa = newGPA;
+		}
+	}
+
+	String getStatus(){
+		if (getGradeLetter().equals("A")) return "Excellent";
+		else if (getGradeLetter().equals("B")) return "Good";
+		else if (getGradeLetter().equals("C")) return "Average";
+		else return "Need Improvements";
+	}
+
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("John Doe", 12345, 3.75);
+        Student s2 = new Student("Jane Smith", 12346, 2.50);
+        
+        System.out.println("Grade: " + s1.calculateGrade());
+        System.out.println("Is Honor Student: " + s1.isHonorStudent());
+        System.out.println("Status: " + s1.getStatus());
+        
+        s2.updateGPA(3.90);
+        s2.displayInfo();
+    }
+}
+```
 ---
 
 ### Task 3: Add String Handling and Array Methods
@@ -872,6 +1048,164 @@ Name: John Doe | ID: 12345 | GPA: 3.75
 ```
 
 ---
+```java
+class Student {
+	
+	private String name;
+	private int studentId;
+	private double gpa; 
+
+	Student(){
+		name = "Unknown";
+		studentId = 0;
+		gpa = 0.0;
+	}
+
+	Student(String name,int studentId,double gpa){
+		this.name = name;
+		this.studentId = studentId;
+		this.gpa = gpa;
+	}
+
+	String getName(){
+		return name;
+	}
+	int getStudentId(){
+		return studentId;
+	}
+	double getGpa(){
+		return gpa;
+	}
+	void setName(String name){
+		this.name = name;
+	}
+	void setStudentId(int studentId){
+		this.studentId = studentId;
+	}
+	void setGpa(double gpa){
+		this.gpa = gpa;
+	}
+
+	void displayInfo(){
+		System.out.println("Student Information:");
+		System.out.println("Student Name : " + name);
+		System.out.println("Student ID : " + studentId);
+		System.out.println("Student GPA : " + gpa);
+		System.out.println();
+	}
+
+	char calculateGrade(){
+		if(gpa >= 3.7) return 'A';
+		else if (gpa >= 3) return 'B';
+		else if (gpa >= 2) return 'C';
+		else if (gpa >= 1) return 'D';
+		else return 'F';
+    }
+	String getGradeLetter(){
+		int level = 0;
+
+		if (gpa >= 3.7) level = 4;
+		else if (gpa >= 3) level = 3;
+		else if (gpa >= 2) level = 2;
+		else if (gpa >= 1) level = 1;
+
+		switch(level){
+		case 4:
+			return "A";
+		case 3:
+			return "B";
+		case 2:
+			return "C";
+		case 1:
+			return "D";
+		default:
+			return "F";
+		}
+	}
+
+	boolean isHonorStudent(){
+		return (gpa > 3.5 ) ? true : false;
+	}
+
+	void updateGPA(double newGPA){
+		if (newGPA>= 0.0 && newGPA <= 4.0){
+			gpa = newGPA;
+		}
+	}
+
+	String getStatus(){
+		if (getGradeLetter().equals("A")) return "Excellent";
+		else if (getGradeLetter().equals("B")) return "Good";
+		else if (getGradeLetter().equals("C")) return "Average";
+		else return "Need Improvements";
+	}
+
+	String formatName(){
+		int spaceIndex = name.indexOf(" ");
+		if (spaceIndex == -1) return name;
+		String firstName = name.substring(0 , spaceIndex);
+		String lastName = name.substring(spaceIndex + 1);
+
+		firstName = firstName.substring(0,1).toUpperCase() + firstName.substring(1).toLowerCase();
+		lastName = lastName.substring(0,1).toUpperCase() + lastName.substring(1).toLowerCase();
+
+		return lastName + "," + firstName;
+
+	}
+
+	String getInitials() {
+    int spaceIndex = name.indexOf(" ");
+    String firstName = spaceIndex != -1 ? name.substring(0, spaceIndex) : name;
+    String lastName = spaceIndex != -1 ? name.substring(spaceIndex + 1) : "";
+
+    String initials = firstName.substring(0,1).toUpperCase();
+    if (!lastName.isEmpty()) {
+        initials += lastName.substring(0,1).toUpperCase();
+    }
+
+    return initials;
+    }
+
+    boolean validateName(){
+    	return name.matches("[A-Za-z ]+");
+
+    }
+
+    String[] getStudentInfoArray() {
+    String[] info = new String[3];
+    info[0] = name;
+    info[1] = String.valueOf(studentId);
+    info[2] = String.valueOf(gpa);
+    return info;
+    }
+
+    void displayFormattedInfo() {
+    System.out.println("=== Formatted Student Info ===");
+    System.out.println(
+        String.format("Name: %s | ID: %d | GPA: %.2f", name, studentId, gpa)
+    );
+    
+    }
+    
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("John Doe", 12345, 3.75);
+        
+        System.out.println("Formatted Name: " + s1.formatName());
+        System.out.println("Initials: " + s1.getInitials());
+        System.out.println("Valid Name: " + s1.validateName());
+        
+        String[] info = s1.getStudentInfoArray();
+        for (String data : info) {
+            System.out.println(data);
+        }
+        
+        s1.displayFormattedInfo();
+    }
+
+```
 
 ### Task 4: Add Array Processing Methods
 
@@ -925,7 +1259,209 @@ Average: 86.25
 Grade A found: true
 2 4 6 8 10
 ```
+```java
+class Student {
+	
+	private String name;
+	private int studentId;
+	private double gpa;
 
+	Student(){
+		name = "Unknown";
+		studentId = 0;
+		gpa = 0.0;
+	}
+
+	Student(String name,int studentId,double gpa){
+		this.name = name;
+		this.studentId = studentId;
+		this.gpa = gpa;
+	}
+
+	String getName(){
+		return name;
+	}
+	int getStudentId(){
+		return studentId;
+	}
+	double getGpa(){
+		return gpa;
+	}
+	void setName(String name){
+		this.name = name;
+	}
+	void setStudentId(int studentId){
+		this.studentId = studentId;
+	}
+	void setGpa(double gpa){
+		this.gpa = gpa;
+	}
+
+	void displayInfo(){
+		System.out.println("Student Information:");
+		System.out.println("Student Name : " + name);
+		System.out.println("Student ID : " + studentId);
+		System.out.println("Student GPA : " + gpa);
+		System.out.println();
+	}
+
+	char calculateGrade(){
+		if(gpa >= 3.7) return 'A';
+		else if (gpa >= 3) return 'B';
+		else if (gpa >= 2) return 'C';
+		else if (gpa >= 1) return 'D';
+		else return 'F';
+    }
+	String getGradeLetter(){
+		int level = 0;
+
+		if (gpa >= 3.7) level = 4;
+		else if (gpa >= 3) level = 3;
+		else if (gpa >= 2) level = 2;
+		else if (gpa >= 1) level = 1;
+
+		switch(level){
+		case 4:
+			return "A";
+		case 3:
+			return "B";
+		case 2:
+			return "C";
+		case 1:
+			return "D";
+		default:
+			return "F";
+		}
+	}
+
+	boolean isHonorStudent(){
+		return (gpa > 3.5 ) ? true : false;
+	}
+
+	void updateGPA(double newGPA){
+		if (newGPA>= 0.0 && newGPA <= 4.0){
+			gpa = newGPA;
+		}
+	}
+
+	String getStatus(){
+		if (getGradeLetter().equals("A")) return "Excellent";
+		else if (getGradeLetter().equals("B")) return "Good";
+		else if (getGradeLetter().equals("C")) return "Average";
+		else return "Need Improvements";
+	}
+
+	String formatName(){
+		int spaceIndex = name.indexOf(" ");
+		if (spaceIndex == -1) return name;
+		String firstName = name.substring(0 , spaceIndex);
+		String lastName = name.substring(spaceIndex + 1);
+
+		firstName = firstName.substring(0,1).toUpperCase() + firstName.substring(1).toLowerCase();
+		lastName = lastName.substring(0,1).toUpperCase() + lastName.substring(1).toLowerCase();
+
+		return lastName + "," + firstName;
+
+	}
+
+	String getInitials() {
+    int spaceIndex = name.indexOf(" ");
+    String firstName = spaceIndex != -1 ? name.substring(0, spaceIndex) : name;
+    String lastName = spaceIndex != -1 ? name.substring(spaceIndex + 1) : "";
+
+    String initials = firstName.substring(0,1).toUpperCase();
+    if (!lastName.isEmpty()) {
+        initials += lastName.substring(0,1).toUpperCase();
+    }
+
+    return initials;
+    }
+
+    boolean validateName(){
+    	return name.matches("[A-Za-z ]+");
+
+    }
+
+    String[] getStudentInfoArray() {
+    String[] info = new String[3];
+    info[0] = name;
+    info[1] = String.valueOf(studentId);
+    info[2] = String.valueOf(gpa);
+    return info;
+    }
+
+    void displayFormattedInfo() {
+    System.out.println("=== Formatted Student Info ===");
+    System.out.println(
+        String.format("Name: %s | ID: %d | GPA: %.2f", name, studentId, gpa)
+    );
+    
+    }
+
+    double processGPAs(double[] gpas){
+    	double highest = 0;
+    	for (double gpa : gpas){
+    		if (gpa > 4.0) {
+    			break;
+    		}
+    		if (gpa < 0.0){
+    			continue;
+    		}
+    		if(gpa > highest) highest = gpa;
+    	}
+    	return highest;
+    }
+    double calculateAverage(double[] grades){
+    	double average = 0.0;
+    	double sum = 0;
+    	for (double grade : grades){
+    		sum = grade + sum;
+    	}
+    	average = sum / grades.length;
+    	return average;
+    }
+    boolean findGradeInArray(char[] grades, char target){
+    	boolean found = false;
+    	for (char grade : grades){
+    		if (target == grade){
+    			found = true;
+    			break;
+    		}
+    	}
+    		return found;
+    }
+    void modifyArray(int[] numbers){
+    	for (int i=0; i<numbers.length; i++){
+    		numbers[i] = 2 * numbers[i];
+    	}
+    }
+
+}
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("John Doe", 12345, 3.75);
+        
+        double[] gpas = {3.5, 2.8, 4.0, 3.9, 0.5};
+        double highest = s1.processGPAs(gpas);
+        System.out.println("Highest GPA: " + highest);
+        
+        double[] grades = {85.0, 90.0, 78.0, 92.0};
+        double avg = s1.calculateAverage(grades);
+        System.out.println("Average: " + avg);
+        
+        char[] gradeList = {'A', 'B', 'C', 'A', 'B'};
+        boolean found = s1.findGradeInArray(gradeList, 'A');
+        System.out.println("Grade A found: " + found);
+        
+        int[] nums = {1, 2, 3, 4, 5};
+        s1.modifyArray(nums);
+        for (int num : nums) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+```
 ---
 
 ### Task 5: Add Method Overloading and Multi-dimensional Arrays
@@ -984,7 +1520,259 @@ Student 1: 78 82 80 85
 Student 2: 92 95 90 93
 Row 0 average: 88.75
 ```
+```java
+class Student {
+	
+	private String name;
+	private int studentId;
+	private double gpa;
 
+	Student(){
+		name = "Unknown";
+		studentId = 0;
+		gpa = 0.0;
+	}
+
+	Student(String name,int studentId,double gpa){
+		this.name = name;
+		this.studentId = studentId;
+		this.gpa = gpa;
+	}
+
+	String getName(){
+		return name;
+	}
+	int getStudentId(){
+		return studentId;
+	}
+	double getGpa(){
+		return gpa;
+	}
+	void setName(String name){
+		this.name = name;
+	}
+	void setStudentId(int studentId){
+		this.studentId = studentId;
+	}
+	void setGpa(double gpa){
+		this.gpa = gpa;
+	}
+
+	void displayInfo(){
+		System.out.println("Student Information:");
+		System.out.println("Student Name : " + name);
+		System.out.println("Student ID : " + studentId);
+		System.out.println("Student GPA : " + gpa);
+		System.out.println();
+	}
+
+	char calculateGrade(){
+		if(gpa >= 3.7) return 'A';
+		else if (gpa >= 3) return 'B';
+		else if (gpa >= 2) return 'C';
+		else if (gpa >= 1) return 'D';
+		else return 'F';
+    }
+	String getGradeLetter(){
+		int level = 0;
+
+		if (gpa >= 3.7) level = 4;
+		else if (gpa >= 3) level = 3;
+		else if (gpa >= 2) level = 2;
+		else if (gpa >= 1) level = 1;
+
+		switch(level){
+		case 4:
+			return "A";
+		case 3:
+			return "B";
+		case 2:
+			return "C";
+		case 1:
+			return "D";
+		default:
+			return "F";
+		}
+	}
+
+	boolean isHonorStudent(){
+		return (gpa > 3.5 ) ? true : false;
+	}
+
+	void updateGPA(double newGPA){
+		if (newGPA>= 0.0 && newGPA <= 4.0){
+			gpa = newGPA;
+		}
+	}
+
+	String getStatus(){
+		if (getGradeLetter().equals("A")) return "Excellent";
+		else if (getGradeLetter().equals("B")) return "Good";
+		else if (getGradeLetter().equals("C")) return "Average";
+		else return "Need Improvements";
+	}
+
+	String formatName(){
+		int spaceIndex = name.indexOf(" ");
+		if (spaceIndex == -1) return name;
+		String firstName = name.substring(0 , spaceIndex);
+		String lastName = name.substring(spaceIndex + 1);
+
+		firstName = firstName.substring(0,1).toUpperCase() + firstName.substring(1).toLowerCase();
+		lastName = lastName.substring(0,1).toUpperCase() + lastName.substring(1).toLowerCase();
+
+		return lastName + "," + firstName;
+
+	}
+
+	String getInitials() {
+    int spaceIndex = name.indexOf(" ");
+    String firstName = spaceIndex != -1 ? name.substring(0, spaceIndex) : name;
+    String lastName = spaceIndex != -1 ? name.substring(spaceIndex + 1) : "";
+
+    String initials = firstName.substring(0,1).toUpperCase();
+    if (!lastName.isEmpty()) {
+        initials += lastName.substring(0,1).toUpperCase();
+    }
+
+    return initials;
+    }
+
+    boolean validateName(){
+    	return name.matches("[A-Za-z ]+");
+
+    }
+
+    String[] getStudentInfoArray() {
+    String[] info = new String[3];
+    info[0] = name;
+    info[1] = String.valueOf(studentId);
+    info[2] = String.valueOf(gpa);
+    return info;
+    }
+
+    void displayFormattedInfo() {
+    System.out.println("=== Formatted Student Info ===");
+    System.out.println(
+        String.format("Name: %s | ID: %d | GPA: %.2f", name, studentId, gpa)
+    );
+    
+    }
+
+    double processGPAs(double[] gpas){
+    	double highest = 0;
+    	for (double gpa : gpas){
+    		if (gpa > 4.0) {
+    			break;
+    		}
+    		if (gpa < 0.0){
+    			continue;
+    		}
+    		if(gpa > highest) highest = gpa;
+    	}
+    	return highest;
+    }
+    double calculateAverage(double[] grades){
+    	double average = 0.0;
+    	double sum = 0;
+    	for (double grade : grades){
+    		sum = grade + sum;
+    	}
+    	average = sum / grades.length;
+    	return average;
+    }
+    boolean findGradeInArray(char[] grades, char target){
+    	boolean found = false;
+    	for (char grade : grades){
+    		if (target == grade){
+    			found = true;
+    			break;
+    		}
+    	}
+    		return found;
+    }
+    void modifyArray(int[] numbers){
+    	for (int i=0; i<numbers.length; i++){
+    		numbers[i] = 2 * numbers[i];
+    	}
+    }
+    int calculateTotal(int a, int b){
+    	return a+b;
+    }
+    double calculateTotal(double a, double b){
+    	return a+b;
+    }
+    int calculateTotal(int a, int b, int c){
+    	return a+b+c;
+    }
+    int process2DArray(int[][] matrix){
+    	int max = matrix[0][0];
+    	for (int i=0; i<matrix.length; i++){
+    		for (int j=0; j<matrix[i].length; j++){
+    			if (matrix[i][j] > max){
+    				max = matrix[i][j];
+    			}
+    		}
+    	}
+    	return max;
+    }
+    int[][] getStudentGrades2D(){
+    	int[][] grades = {
+    		{67,87,89,64},
+    		{76,76,98,83},
+    		{83,74,92,59}
+    	};
+    	return grades;
+    }
+    void displayGradeTable(int[][] grades){
+    	for (int i=0; i<grades.length; i++){
+    		System.out.print("Student " + i + ":");
+    		for (int j=0; j<grades[i].length; j++){
+    			System.out.print(grades[i][j] + " ");
+    		}
+    		System.out.println();
+    	}
+    }
+    double calculateRowAverage(int[][] grades, int row){
+    	int sum = 0;
+
+    	for (int j=0; j<grades[row].length; j++){
+    		sum +=  grades[row][j];
+    	}
+    	return (double)sum/grades[row].length;
+    }
+    double calculateColumnAverage(int[][] grades, int col){
+    	int sum = 0;
+    	for (int i=0; i<grades.length; i++){
+    		sum += grades[i][col];
+    	}
+    	return (double)sum/grades.length;
+    }
+
+}
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("John Doe", 12345, 3.75);
+        
+        // Method overloading
+        System.out.println("Sum (int): " + s1.calculateTotal(5, 3));
+        System.out.println("Sum (double): " + s1.calculateTotal(5.5, 3.2));
+        System.out.println("Sum (3 ints): " + s1.calculateTotal(5, 3, 2));
+        
+        // 2D Array
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int max = s1.process2DArray(matrix);
+        System.out.println("Max value: " + max);
+        
+        int[][] grades = s1.getStudentGrades2D();
+        s1.displayGradeTable(grades);
+        
+        double rowAvg = s1.calculateRowAverage(grades, 0);
+        System.out.println("Row 0 average: " + rowAvg);
+    }
+}
+
+```
 ---
 
 ### Task 6: Add Uneven Arrays, Type Conversion, and Complete Integration
